@@ -12,20 +12,26 @@
   # todo: do this better (home-manager?)
   # desktop packages
 
+  # todo:
+  # new: non-olympus lonn?, rysy, huion graphics tablet driver :disappointed_relieved:
+  # patches: nearest-neighbour scaling dolphin, systemd wawa
   environment.systemPackages = with pkgs; [
     # system
     keepassxc
     kdePackages.filelight
+
+    # communication
+    vesktop
 
     # media
     gimp
     krita
     aseprite
     audacity
-    kdePackages.kdenlive
-    vlc
-    musescore
     lmms
+    musescore
+    vlc
+    kdePackages.kdenlive
 
     # minecraft
     prismlauncher
@@ -35,13 +41,9 @@
     avalonia-ilspy
   ];
 
-  # steam
-  programs.steam.enable = true;
-
   # browser
   programs.firefox = {
     enable = true;
-
     policies = {
       DisableTelemetry = true;
       AIControls.Default.Value = "blocked";

@@ -6,15 +6,17 @@
 
 {
   imports = [
-      ./hardware-configuration.nix # include the results of the hardware scan.
-      ./users.nix
-      ./locale.nix
-      ./console.nix
-      ./desktop.nix
-      ./fonts.nix
-      ./networking.nix
-      ./services.nix
-    ];
+    ./hardware-configuration.nix # include the results of the hardware scan
+    ./users.nix
+    ./locale.nix
+    ./console.nix
+    ./desktop.nix
+    ./steam.nix
+    ./jetbrains.nix
+    ./fonts.nix
+    ./networking.nix
+    ./services.nix
+  ];
 
   # use systemd-boot
   boot.loader.systemd-boot.enable = true;
