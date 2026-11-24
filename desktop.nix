@@ -9,11 +9,12 @@
   services.desktopManager.plasma6.enable = true;
   services.displayManager.sddm.enable = true;
 
-  # todo: do this better (home-manager?)
+  # todo: use home-manager
   # desktop packages
 
   # todo:
-  # new: non-olympus lonn?, rysy, huion graphics tablet driver :disappointed_relieved:
+  # vscode
+  # new: renogare font (can steal mayb), non-olympus lonn?, rysy, huion graphics tablet driver :disappointed_relieved:
   # patches: nearest-neighbour scaling dolphin, systemd wawa
   environment.systemPackages = with pkgs; [
     # system

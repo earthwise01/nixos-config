@@ -16,6 +16,7 @@
     ./fonts.nix
     ./networking.nix
     ./services.nix
+    ./openrgb.nix
   ];
 
   # use systemd-boot

@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   users.users.earthwise = {
@@ -7,5 +7,6 @@
       "wheel"
       "networkmanger"
     ];
+    shell = pkgs.zsh;
   };
 }
