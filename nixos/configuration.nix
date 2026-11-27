@@ -2,11 +2,10 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   imports = [
-    ./hardware-configuration.nix # include the results of the hardware scan
     ./users.nix
     ./locale.nix
     ./console.nix
@@ -23,13 +22,23 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # systemd wawa
+  systemd.package = pkgs.systemd-wawa;
+
   # nix settings
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
   ];
-  nixpkgs.config = {
-    allowUnfree = true;
+  nixpkgs = {
+    overlays = [
+      inputs.self.overlays.additions
+      inputs.self.overlays.modifications
+      inputs.self.overlays.unstable-packages
+    ];
+    config = {
+      allowUnfree = true;
+    };
   };
 
 

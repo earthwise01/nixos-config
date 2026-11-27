@@ -47,8 +47,13 @@
     nano
     wget
     git
+    zip
+    unzip
 
     # misc
+    libqalculate
+    fastfetch
+    hyfetch
     ffmpeg
     yt-dlp
     wine
@@ -58,5 +63,22 @@
     dotnet-sdk_11
     dotnet-sdk_8
     mono
+    # thisdoenst workk
+    # (julia-bin.withPackages.override {
+    #   packageOverrides = {
+    #     "Maple" = fetchFromGitHub {
+    #       owner = "CelestialCartographers";
+    #       repo = "Maple";
+    #       rev = "72e9b8de4c0efc71b142b681f414454b560ed094";
+    #       sha256 = "09s9bzybs8ldrsnachrii78k23g7i29bagnr6w32zcsfxvbrnj2y";
+    #     };
+    #   };
+    # } [
+    #   "YAML"
+    #   "ZipFile"
+    #   "ArgParse"
+    #   "Maple"
+    # ])
+    julia
   ];
 }

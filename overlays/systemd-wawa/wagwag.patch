@@ -1,0 +1,26 @@
+diff --git i/meson_options.txt w/meson_options.txt
+index bacb861fa9..8454a2290c 100644
+--- i/meson_options.txt
++++ w/meson_options.txt
+@@ -559,7 +559,7 @@ option('ok-color', type : 'combo',
+                   'white', 'highlight-black', 'highlight-red', 'highlight-green',
+                   'highlight-yellow', 'highlight-blue', 'highlight-magenta',
+                   'highlight-cyan', 'highlight-white'],
+-       value : 'green',
++       value : 'yellow',
+        description: 'color of the "OK" status message')
+ option('urlify', type : 'boolean', value : true,
+        description : 'enable pager Hyperlink ANSI sequence support')
+diff --git i/src/core/job.c w/src/core/job.c
+index 2388d1de95..d21e15a0e8 100644
+--- i/src/core/job.c
++++ w/src/core/job.c
+@@ -720,7 +720,7 @@ static const struct {
+         int log_level;
+         const char *color, *word;
+ } job_done_messages[_JOB_RESULT_MAX] = {
+-        [JOB_DONE]        = { LOG_INFO,    ANSI_OK_COLOR,         "  OK  " },
++        [JOB_DONE]        = { LOG_INFO,    ANSI_OK_COLOR,         "WAGWAG" },
+         [JOB_CANCELED]    = { LOG_INFO,                                    },
+         [JOB_TIMEOUT]     = { LOG_ERR,     ANSI_HIGHLIGHT_RED,    " TIME " },
+         [JOB_FAILED]      = { LOG_ERR,     ANSI_HIGHLIGHT_RED,    "FAILED" },

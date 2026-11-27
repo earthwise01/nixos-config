@@ -1,0 +1,20 @@
+--- a/src/kitemviews/private/kpixmapmodifier.cpp
++++ b/src/kitemviews/private/kpixmapmodifier.cpp
+@@ -296,7 +296,7 @@
+         return;
+     }
+     qreal dpr = pixmap.devicePixelRatio();
+-    pixmap = pixmap.scaled(scaledSize, Qt::KeepAspectRatio, Qt::SmoothTransformation);
++    pixmap = pixmap.scaled(scaledSize, Qt::KeepAspectRatio, Qt::FastTransformation);
+     pixmap.setDevicePixelRatio(dpr);
+ }
+ 
+@@ -307,7 +307,7 @@
+         return;
+     }
+     const qreal dpr = image.devicePixelRatio();
+-    image = image.scaled(scaledSize, Qt::KeepAspectRatio, Qt::SmoothTransformation);
++    image = image.scaled(scaledSize, Qt::KeepAspectRatio, Qt::FastTransformation);
+     image.setDevicePixelRatio(dpr);
+ }
+ 

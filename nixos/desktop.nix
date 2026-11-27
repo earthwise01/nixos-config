@@ -7,15 +7,14 @@
 
   # kde plasma
   services.desktopManager.plasma6.enable = true;
-  services.displayManager.sddm.enable = true;
+  services.displayManager.plasma-login-manager.enable = true;
 
   # todo: use home-manager
   # desktop packages
 
   # todo:
   # vscode
-  # new: renogare font (can steal mayb), non-olympus lonn?, rysy, huion graphics tablet driver :disappointed_relieved:
-  # patches: nearest-neighbour scaling dolphin, systemd wawa
+  # new: non-olympus lonn?, rysy, huion graphics tablet driver :disappointed_relieved:
   environment.systemPackages = with pkgs; [
     # system
     keepassxc
@@ -28,11 +27,17 @@
     gimp
     krita
     aseprite
+    inkscape
+    blender
     audacity
     lmms
     musescore
     vlc
+    audacious
     kdePackages.kdenlive
+
+    # office
+    libreoffice
 
     # minecraft
     prismlauncher
